@@ -1,6 +1,7 @@
 public with sharing class UpdateAccount {
     public void updatePriority() {
         List<Account> accts = [SELECT AnnualRevenue FROM Account WHERE AnnualRevenue != null];
+        List<Account> updatedAccts = new List<Account>();
 
         for (Account acct : accts) {
             if (acct.AnnualRevenue < 200000000) {
@@ -10,6 +11,8 @@ public with sharing class UpdateAccount {
             } else {
                 acct.CustomerPriority__c = 'High';
             }
+            updatedAccts.add(acct);
         }
+        update updatedAccts;
     }
 }

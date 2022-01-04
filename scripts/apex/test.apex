@@ -1,12 +1,12 @@
 // // Test 1
-// TODO: add delete here
-List<String> names = new List<String>{ 'Test1', 'Test2', 'Test3'};
-AccountUtils accts = new AccountUtils();
-List<Id> ids = accts.createAccs(names);
+// // TODO: add delete here
+// List<String> names = new List<String>{ 'Test1', 'Test2', 'Test3'};
+// AccountUtils accts = new AccountUtils();
+// List<Id> ids = accts.createAccs(names);
 
-for (Id id : ids) {
-    System.debug(id);
-}
+// for (Id id : ids) {
+//     System.debug(id);
+// }
 
 // // Test 2
 // // Get the required fields of an sObject (Object Level)
@@ -23,8 +23,13 @@ for (Id id : ids) {
 //         System.debug(fieldName + ' - is Required');
 // }
 
-TaskUpdate taskUpd = new TaskUpdate();
+// TaskUpdate taskUpd = new TaskUpdate();
 
-for (Account acct : [SELECT Id, OwnerId FROM Account WHERE Id IN :ids ]) {
-    taskUpd.createTasks(acct);
-}
+// for (Account acct : [SELECT Id, OwnerId FROM Account WHERE Id IN :ids ]) {
+//     taskUpd.createTasks(acct);
+// }
+
+// Test 3
+
+UpdateAccount updAcct = new UpdateAccount();
+updAcct.updatePriority();
