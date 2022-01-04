@@ -1,0 +1,5 @@
+// SELECT Id, AccountId, ActivityDate, CreatedById, OwnerId, Priority, Status, Subject, WhatId, WhoId, LastModifiedById
+//  FROM Task
+
+SELECT Name, AnnualRevenue
+  FROM Account WHERE AnnualRevenue != null
