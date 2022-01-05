@@ -23,6 +23,7 @@ public with sharing class TaskUpdate {
                                   OwnerId = acct.OwnerId,
                                   WhatId = acct.Id);
         List<Task> listTask =new List<Task>{ acctTask1, acctTask2, acctTask3 };
+        
         insert listTask;
     }
 }

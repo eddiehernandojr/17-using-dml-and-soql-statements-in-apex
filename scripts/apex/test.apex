@@ -29,7 +29,10 @@
 //     taskUpd.createTasks(acct);
 // }
 
-// Test 3
+// // Test 3
+// UpdateAccount updAcct = new UpdateAccount();
+// updAcct.updatePriority();
 
-UpdateAccount updAcct = new UpdateAccount();
-updAcct.updatePriority();
+// Test 4
+UpSell us = new UpSell();
+us.createOpps();

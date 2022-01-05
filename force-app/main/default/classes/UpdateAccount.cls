@@ -2,6 +2,7 @@ public with sharing class UpdateAccount {
     public void updatePriority() {
         List<Account> updatedAccts = new List<Account>();
 
+        // TODO: check if null is valid for this SOQL query
         for (Account acct : [SELECT AnnualRevenue FROM Account WHERE AnnualRevenue != null]) {
             if (acct.AnnualRevenue < 200000000) {
                 acct.CustomerPriority__c = 'Low';
@@ -12,6 +13,7 @@ public with sharing class UpdateAccount {
             }
             updatedAccts.add(acct);
         }
+        
         update updatedAccts;
     }
 }
