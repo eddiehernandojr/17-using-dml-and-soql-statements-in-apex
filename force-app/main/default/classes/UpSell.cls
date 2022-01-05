@@ -27,7 +27,7 @@ public with sharing class UpSell {
     public String getNextLevel(Sla level) {
         Integer index = 0;
         Sla nextLevel;
-		System.debug(level.name());
+		
         // Note: There is no fall-through. After the code block is executed, the switch statement exits.
         switch on level {
             when BRONZE {
