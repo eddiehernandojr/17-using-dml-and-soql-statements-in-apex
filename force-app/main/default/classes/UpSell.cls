@@ -21,7 +21,7 @@ public with sharing class UpSell {
             opps.add(opp);
         }
 
-        upsert opps;
+        insert opps;
     }
 
     public String getNextLevel(Sla level) {
