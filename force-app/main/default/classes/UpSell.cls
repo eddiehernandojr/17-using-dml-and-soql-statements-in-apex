@@ -42,11 +42,8 @@ public with sharing class UpSell {
                 index = Sla.GOLD.ordinal() + 1;
                 nextLevel = Sla.values()[index];
             }
-            when PLATINUM {
-                nextLevel = Sla.PLATINUM;
-            }
             when else {
-                nextLevel = Sla.BRONZE;
+                nextLevel = Sla.PLATINUM;
             }
         }
         
